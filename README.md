@@ -9,6 +9,7 @@ Encadrant: Nicolas Thiéry
 
 - [ ] Réviser git
 - [X] Compte github Adrien: https://github.com/Didayolo
+- [X] Compte github Thomas: https://github.com/tfoltete
 
 ### Python / arbres de génération
 
