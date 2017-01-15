@@ -20,13 +20,13 @@ Implanter en Python des fonctions récursives pour:
 
 ### SageMath
 
-- [ ] Essayer http://cloud.sagemath.com/
-- [ ] Lire les [conventions de codage de Sage](http://doc.sagemath.org/html/en/developer/#writing-code-for-sage)
-- [ ] Installer SageMath sur vos machines (http://download.sagemath.org)
+- [x] Essayer http://cloud.sagemath.com/
+- [x] Lire les [conventions de codage de Sage](http://doc.sagemath.org/html/en/developer/#writing-code-for-sage)
+- [x] Installer SageMath sur vos machines (http://download.sagemath.org)
 
 ### Implantations existantes de RecursivelyEnumeratedSets + mapreduce
 
-- [ ] Jouer avec RecursivelyEnumeratedSets
+- [x] Jouer avec RecursivelyEnumeratedSets
 
         sage: RecursivelyEnumeratedSet?
         sage: sage: f = lambda a: [a+3, a+5]
