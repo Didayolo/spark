@@ -50,7 +50,7 @@ Implanter en Python des fonctions récursives pour:
 ### Spark
 
 - [ ] Commencer à lire la documentation de Spark
-- [ ] Facile a installer sur votre portable?
+- [X] Facile a installer sur votre portable?
 - [ ] Réunion Spark
 
       Vendredi 20 janvier de 9h00 à 12h00 dans la salle 166 du LAL
