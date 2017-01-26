@@ -45,11 +45,11 @@ Implanter en Python des fonctions récursives pour:
         sage: 
         sage: C.map_reduce?
 
-- [ ] Lire le rapport de #107
+- [x] Lire le rapport de #107
 
 ### Spark
 
-- [ ] Commencer à lire la documentation de Spark
+- [x] Commencer à lire la documentation de Spark
 - [X] Facile a installer sur votre portable?
 - [ ] Réunion Spark
 
