@@ -67,3 +67,5 @@ Implanter en Python des fonctions récursives pour:
 - http://opendreamkit.org
 - Calcul Mathématique avec Sage, chapitre 15.4, algorithmes génériques  http://sagebook.gforge.inria.fr/
 - Implantation de MapReduce dans Sage, cas multiprocesseur: voir le rapport dans https://github.com/OpenDreamKit/OpenDreamKit/issues/107
+
+- Sage developers guide: http://doc.sagemath.org/html/en/developer/
