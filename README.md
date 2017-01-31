@@ -45,7 +45,7 @@ Implanter en Python des fonctions récursives pour:
         sage: 
         sage: C.map_reduce?
 
-- [x] Lire le rapport de #107
+- [x] Lire le rapport de OpenDreamkit/OpenDreamKit#107
 
 ### Exemples
 
