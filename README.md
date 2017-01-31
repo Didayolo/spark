@@ -47,6 +47,11 @@ Implanter en Python des fonctions récursives pour:
 
 - [x] Lire le rapport de #107
 
+### Exemples
+
+- [ ] Monoides numériques
+- [ ] Lire l'article ["Exploring the tree of Numerical Semigroups"](https://arxiv.org/find/all/1/all:+AND+Hivert+Fromentin/0/1/0/all/0/1)
+
 ### Spark
 
 - [x] Commencer à lire la documentation de Spark
