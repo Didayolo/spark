@@ -1,4 +1,5 @@
-ubuntu@134.158.74.140
+#ubuntu@134.158.74.140
 
-apt-get install spark
-apt install ansible
+sudo apt install spark
+sudo apt install ansible
+sudo apt install git
