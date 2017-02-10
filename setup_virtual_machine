@@ -1,6 +1,5 @@
 #ubuntu@134.158.74.140
 
-sudo apt install spark
 sudo apt install ansible
 sudo apt install git
 
@@ -20,3 +19,9 @@ sudo apt install binutils gcc make m4 perl tar
 cd sage-7.5.1
 make
 
+
+sudo apt install spark
+#installation de la jvm
+sudo apt-add-repository ppa:webupd8team/java
+sudo apt-get update
+sudo apt-get install oracle-java8-installer
