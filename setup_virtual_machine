@@ -18,7 +18,6 @@ cd sage-7.5.1
 make
 
 
-sudo apt install spark
 #installation de la jvm
 sudo apt-add-repository ppa:webupd8team/java
 sudo apt-get update
