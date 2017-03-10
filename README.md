@@ -65,12 +65,12 @@ Def: descendants: tous les noeuds sous un noeud donné (fils, petits fils, ...)
 
 
 Approches possibles:
-- [ ] (a) Pour chaque noeud de l'arbre, modéliser par un RDD l'ensemble de ses fils
-- [ ] (b) Idem, mais on s'arrête à une profondeur k donnée, et ensuite on travaille en local: le RDD d'un noeud à profondeur k contient tous les descendants du noeuds: a priori ne gère pas bien les arbres déséquilibrés "en largeur"
-- [ ] (d) Pour chaque noeud de l'arbre, modéliser par un RDD l'ensemble de ses descendants
-- [ ] (c) Pour chaque k, modéliser par un RDD l'ensemble des noeuds à profondeur k
+- [ ] a. Pour chaque noeud de l'arbre, modéliser par un RDD l'ensemble de ses fils
+- [ ] b. Idem, mais on s'arrête à une profondeur k donnée, et ensuite on travaille en local: le RDD d'un noeud à profondeur k contient tous les descendants du noeuds: a priori ne gère pas bien les arbres déséquilibrés "en largeur"
+- [ ] c. Pour chaque noeud de l'arbre, modéliser par un RDD l'ensemble de ses descendants
+- [ ] d. Pour chaque k, modéliser par un RDD l'ensemble des noeuds à profondeur k
 
-- [ ] (a'): comme a, mais avec génération au vol / paresseuse des RDD
+- [ ] a'. comme a, mais avec génération au vol / paresseuse des RDD
 
 
 - [ ] Gestion des arbres déséquilibrés "en profondeur"
