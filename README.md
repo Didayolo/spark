@@ -55,10 +55,29 @@ Implanter en Python des fonctions récursives pour:
 ### Spark
 
 - [x] Commencer à lire la documentation de Spark
-- [X] Facile a installer sur votre portable?
-- [ ] Réunion Spark
+- [X] Installation sur portable
+- [X] Installation monomachine sur le cloud
+- [ ] Installation multimachine sur le cloud
 
+#### Modélisation d'un RecursivelyEnumeratedSet par un RDD
+
+Def: descendants: tous les noeuds sous un noeud donné (fils, petits fils, ...)
+
+
+Approches possibles:
+- [ ] (a) Pour chaque noeud de l'arbre, modéliser par un RDD l'ensemble de ses fils
+- [ ] (b) Idem, mais on s'arrête à une profondeur k donnée, et ensuite on travaille en local: le RDD d'un noeud à profondeur k contient tous les descendants du noeuds: a priori ne gère pas bien les arbres déséquilibrés "en largeur"
+- [ ] (d) Pour chaque noeud de l'arbre, modéliser par un RDD l'ensemble de ses descendants
+- [ ] (c) Pour chaque k, modéliser par un RDD l'ensemble des noeuds à profondeur k
+
+- [ ] (a'): comme a, mais avec génération au vol / paresseuse des RDD
+
+
+- [ ] Gestion des arbres déséquilibrés "en profondeur"
+
+- [X] Réunion Spark
       Vendredi 20 janvier de 9h00 à 12h00 dans la salle 166 du LAL
+- [ ] École Spark au LAL: https://indico.lal.in2p3.fr/event/3426/
 
 # Références
 
