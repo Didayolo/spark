@@ -59,10 +59,18 @@ Implanter en Python des fonctions récursives pour:
 - [X] Installation monomachine sur le cloud
 - [ ] Installation multimachine sur le cloud
 
+#### Modélisation de l'ensemble des mots sur un alphabet par un RDD
+
+Soit A un alphabet (e.g. de taille 10).
+Modéliser A par un RDD, puis `A^n` par un RDD construit comme produit cartésien de A.
+Puis lancer un map-reduce (par exemple pour compter les mots) et, en analysant l'usage mémoire,
+déterminer si spark a ou pas développé en mémoire `A^n`.
+
 #### Modélisation d'un RecursivelyEnumeratedSet par un RDD
 
-Def: descendants: tous les noeuds sous un noeud donné (fils, petits fils, ...)
+Soit T un ensemble défini récursivement.
 
+Def: descendants: tous les noeuds sous un noeud donné (fils, petits fils, ...)
 
 Approches possibles:
 - [ ] a. Pour chaque noeud de l'arbre, modéliser par un RDD l'ensemble de ses fils
@@ -72,12 +80,18 @@ Approches possibles:
 
 - [ ] a'. comme a, mais avec génération au vol / paresseuse des RDD
 
-
 - [ ] Gestion des arbres déséquilibrés "en profondeur"
+
+Dans chacun des cas, l'objectif final est de lancer un map-reduce pour, par exemple, 
+compter les éléments de T.
+
+## Formation
 
 - [X] Réunion Spark
       Vendredi 20 janvier de 9h00 à 12h00 dans la salle 166 du LAL
 - [x] École Spark au LAL: https://indico.lal.in2p3.fr/event/3426/
+
+
 
 # Références
 
