@@ -24,6 +24,8 @@ Implanter en Python des fonctions récursives pour:
 - [x] Lire les [conventions de codage de Sage](http://doc.sagemath.org/html/en/developer/#writing-code-for-sage)
 - [x] Installer SageMath sur vos machines (http://download.sagemath.org)
 
+### Lire le chapitre combinatoire de Calcul Mathématique avec Sage
+
 ### Implantations existantes de RecursivelyEnumeratedSets + mapreduce
 
 - [x] Jouer avec RecursivelyEnumeratedSets
@@ -65,6 +67,12 @@ Soit A un alphabet (e.g. de taille 10).
 Modéliser A par un RDD, puis `A^n` par un RDD construit comme produit cartésien de A.
 Puis lancer un map-reduce (par exemple pour compter les mots) et, en analysant l'usage mémoire,
 déterminer si spark a ou pas développé en mémoire `A^n`.
+
+#### Modélisation de l'ensembe des arbres binaires à n noeuds par un RDD
+
+Utiliser `T_0={Leaf}` et `T_n = \cup_i T_i \times { Node } \times T_{n-i-1}`.
+Puis lancer un map reduce. Par exemple, compter les arbres, ou compter les arbres par profondeur
+(utiliser `p(t) = X^{profondeur de t}` et sympy pour manipuler des polynomes).
 
 #### Modélisation d'un RecursivelyEnumeratedSet par un RDD
 
