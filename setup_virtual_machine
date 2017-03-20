@@ -1,6 +1,8 @@
 sudo apt install ansible
 sudo apt install git
 
+sudo apt install spark ?????
+
 # repo github
 git clone https://github.com/Didayolo/spark
 
