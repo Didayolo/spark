@@ -1,0 +1,25 @@
+#ubuntu@134.158.74.140
+
+#sudo apt install spark
+sudo apt install ansible
+sudo apt install git
+
+# repo github
+git clone https://github.com/Didayolo/spark
+
+# spark 
+wget https://d3kbcqa49mib13.cloudfront.net/spark-2.1.0-bin-hadoop2.7.tgz
+
+# sage sources
+wget www-ftp.lip6.fr/pub/math/sagemath/src/sage-7.5.1.tar.gz
+tar xzf sage-7.5.1.tar.gz
+
+# verif des prerequis a l'installation de sage
+which gcc make m4 perl ar ranlib tar python
+# installation en cas de manque
+sudo apt install binutils gcc make m4 perl tar
+
+# on compile
+cd sage-7.5.1
+make
+
