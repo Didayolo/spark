@@ -1,8 +1,7 @@
-#ubuntu@134.158.74.140
-
-sudo apt install spark
 sudo apt install ansible
 sudo apt install git
+
+sudo apt install spark ?????
 
 # repo github
 git clone https://github.com/Didayolo/spark
@@ -20,3 +19,22 @@ sudo apt install binutils gcc make m4 perl tar
 cd sage-7.5.1
 make
 
+#Téléchargement puis installation de spark depuis cette adresse:
+# http://spark.apache.org/downloads.html
+
+#installation de la jvm
+sudo apt-add-repository ppa:webupd8team/java
+sudo apt-get update
+sudo apt-get install oracle-java8-installer
+
+#ajout de 127.0.0.1 combispark dans /etc/hosts
+
+#affichage des erreurs (warnings?) uniquement dans la console
+cd /usr/lib/spark-2.1.0/conf
+cp log4j.properties.template log4j.properties
+remplacer : log4j.rootCategory=INFO, console
+par log4j.rootCategory=ERROR(WARN), console
+
+# optionnel
+sudo apt install ipython
+sudo apt install ipython-notebook

@@ -24,6 +24,8 @@ Implanter en Python des fonctions récursives pour:
 - [x] Lire les [conventions de codage de Sage](http://doc.sagemath.org/html/en/developer/#writing-code-for-sage)
 - [x] Installer SageMath sur vos machines (http://download.sagemath.org)
 
+### Lire le chapitre combinatoire de Calcul Mathématique avec Sage
+
 ### Implantations existantes de RecursivelyEnumeratedSets + mapreduce
 
 - [x] Jouer avec RecursivelyEnumeratedSets
@@ -49,16 +51,55 @@ Implanter en Python des fonctions récursives pour:
 
 ### Exemples
 
-- [ ] Monoides numériques
-- [ ] Lire l'article ["Exploring the tree of Numerical Semigroups"](https://arxiv.org/find/all/1/all:+AND+Hivert+Fromentin/0/1/0/all/0/1)
+- [x] Monoides numériques
+- [x] Lire l'article ["Exploring the tree of Numerical Semigroups"](https://arxiv.org/find/all/1/all:+AND+Hivert+Fromentin/0/1/0/all/0/1)
 
 ### Spark
 
 - [x] Commencer à lire la documentation de Spark
-- [X] Facile a installer sur votre portable?
-- [ ] Réunion Spark
+- [X] Installation sur portable
+- [X] Installation monomachine sur le cloud
+- [ ] Installation multimachine sur le cloud
 
+#### Modélisation de l'ensemble des mots sur un alphabet par un RDD
+
+Soit A un alphabet (e.g. de taille 10).
+Modéliser A par un RDD, puis `A^n` par un RDD construit comme produit cartésien de A.
+Puis lancer un map-reduce (par exemple pour compter les mots) et, en analysant l'usage mémoire,
+déterminer si spark a ou pas développé en mémoire `A^n`.
+
+#### Modélisation de l'ensembe des arbres binaires à n noeuds par un RDD
+
+Utiliser `T_0={Leaf}` et `T_n = \cup_i T_i \times { Node } \times T_{n-i-1}`.
+Puis lancer un map reduce. Par exemple, compter les arbres, ou compter les arbres par profondeur
+(utiliser `p(t) = X^{profondeur de t}` et sympy pour manipuler des polynomes).
+
+#### Modélisation d'un RecursivelyEnumeratedSet par un RDD
+
+Soit T un ensemble défini récursivement.
+
+Def: descendants: tous les noeuds sous un noeud donné (fils, petits fils, ...)
+
+Approches possibles:
+- [ ] a. Pour chaque noeud de l'arbre, modéliser par un RDD l'ensemble de ses fils
+- [ ] b. Idem, mais on s'arrête à une profondeur k donnée, et ensuite on travaille en local: le RDD d'un noeud à profondeur k contient tous les descendants du noeuds: a priori ne gère pas bien les arbres déséquilibrés "en largeur"
+- [ ] c. Pour chaque noeud de l'arbre, modéliser par un RDD l'ensemble de ses descendants
+- [ ] d. Pour chaque profondeur k, modéliser par un RDD l'ensemble des noeuds à profondeur k
+
+- [ ] a'. comme a, mais avec génération au vol / paresseuse des RDD
+
+- [ ] Gestion des arbres déséquilibrés "en profondeur"
+
+Dans chacun des cas, l'objectif final est de lancer un map-reduce pour, par exemple, 
+compter les éléments de T.
+
+## Formation
+
+- [X] Réunion Spark
       Vendredi 20 janvier de 9h00 à 12h00 dans la salle 166 du LAL
+- [x] École Spark au LAL: https://indico.lal.in2p3.fr/event/3426/
+
+
 
 # Références
 
