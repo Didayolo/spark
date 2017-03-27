@@ -2,9 +2,9 @@
 ### Tests de RecursivelyEnumeratedSets ###
 
 
-# A -> Tous les mots de taille <= 4 compose de la lettre a
+# A -> Tous les mots de taille <= 21 compose de la lettre a et b
 seeds = ['']
-succ = lambda m: [m+'a'] if len(m)<4 else []
+succ = lambda m: [m+'a', m+'b'] if len(m) <= 21 else []
 A = RecursivelyEnumeratedSet(seeds, succ, structure='forest')
 
 def contains(rec_set, element, max_search):
@@ -61,7 +61,7 @@ def contains_mr(rec_set, element):
     return rec_set.map_reduce(map_function, reduce_function, reduce_init)
 
 print(count(A)) # 5
-print(contains(A, 'aa', 10)) # True
-print(contains(A, 'ab', 10)) # False
-print(contains_mr(A, 'aa')) # True
-print(contains_mr(A, 'ab')) # False
+#print(contains(A, 'aa', 10)) # True
+#print(contains(A, 'ab', 10)) # False
+#print(contains_mr(A, 'aa')) # True
+#print(contains_mr(A, 'ab')) # False

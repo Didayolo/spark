@@ -1,0 +1,113 @@
+           *******************************************************
+                         Report of SPARK Examination
+                              Examiner GPL 2012
+             Copyright (C) 2012 Altran Praxis Limited, Bath, U.K.
+           *******************************************************
+
+
+                        DATE : 10-FEB-2017 12:26:46.78
+
+Options:
+    noswitch
+    noindex_file
+    nowarning_file
+    notarget_compiler_data
+    noconfig_file
+    source_extension=py
+    listing_extension=lst
+    nodictionary_file
+    report_file=spark.rep
+    nohtml
+    nostatistics
+    fdl_identifiers=accept
+    flow_analysis=auto
+    language=95
+    profile=sequential
+    annotation_character=#
+    rules=lazy
+    error_explanations=off
+    justification_option=full
+    output_directory=.
+    output_directory (actual)=/home/ubuntu/spark/
+
+Selected files:
+   permutation.py
+
+
+No Index files were used
+
+
+No Meta Files used
+
+
+Full warning reporting selected
+
+
+Source Filename(s) used were:
+   /home/ubuntu/spark/permutation.py
+
+
+
+Source Filename:   /home/ubuntu/spark/permutation.py
+Listing Filename:  /home/ubuntu/spark/permutation.lst
+
+***     No units in file
+
+
+13 error(s) or warning(s)
+
+Line
+   1  def permutation(n):
+      ^1
+*** (  1)  Syntax Error      : No COMPILATION_UNIT can start with IDENTIFIER.
+--- (  2)  Warning           :430: SLI generation abandoned owing to syntax or 
+           semantic errors or multiple units in a single source file.
+
+  15  #tests
+      ^3
+*** (  3)  Lexical Error     : Illegal token - Token ignored.
+
+  16  #print(permutation(1))
+      ^4
+*** (  4)  Lexical Error     : Illegal token - Token ignored.
+
+  17  #print(permutation(12))
+      ^5
+*** (  5)  Lexical Error     : Illegal token - Token ignored.
+
+  18  #print(permutation(123))
+      ^6
+*** (  6)  Lexical Error     : Illegal token - Token ignored.
+
+  19  #print(permutation(8787))
+      ^7
+*** (  7)  Lexical Error     : Illegal token - Token ignored.
+
+  38  #tests
+      ^8
+*** (  8)  Lexical Error     : Illegal token - Token ignored.
+
+  39  #alphabet = ["a", "b", "c"]
+      ^9
+*** (  9)  Lexical Error     : Illegal token - Token ignored.
+
+  40  #print(allWords(alphabet, 0))
+      ^10
+*** ( 10)  Lexical Error     : Illegal token - Token ignored.
+
+  41  #print(allWords(alphabet, 1))
+      ^11
+*** ( 11)  Lexical Error     : Illegal token - Token ignored.
+
+  42  #print(allWords(alphabet, 2))
+      ^12
+*** ( 12)  Lexical Error     : Illegal token - Token ignored.
+
+  43  #print(allWords(alphabet, 4))
+      ^13
+*** ( 13)  Lexical Error     : Illegal token - Token ignored.
+
+Note: Automatic flow analysis mode selected
+
+
+--End of file--------------------------------------------------
