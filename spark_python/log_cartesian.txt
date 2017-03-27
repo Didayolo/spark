@@ -1,0 +1,26 @@
+ubuntu@combispark:~/spark_python$ time spark-submit test_flat_cartesian_product.py 65536                                                                           
+
+real    0m7.611s
+user    0m13.688s
+sys 0m1.512s
+ubuntu@combispark:~/spark_python$ time spark-submit test_flat_cartesian_product.py 1048576                                                                         
+
+real    0m7.404s
+user    0m13.168s
+sys 0m1.520s
+ubuntu@combispark:~/spark_python$ time spark-submit test_flat_cartesian_product.py 16777216                                                                        
+
+real    0m7.992s
+user    0m13.420s
+sys 0m1.440s
+ubuntu@combispark:~/spark_python$ time spark-submit test_flat_cartesian_product.py 268435456                                                                       
+
+real    0m15.804s
+user    0m13.384s
+sys 0m1.536s
+ubuntu@combispark:~/spark_python$ time spark-submit test_flat_cartesian_product.py 4294967296                                                                      
+
+real    2m12.916s
+user    0m13.504s
+sys 0m1.552s
+

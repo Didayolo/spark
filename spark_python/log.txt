@@ -1,0 +1,16 @@
+
+On a compté le nombre de mots de taille 16 composés de l'alphabet {a, b, c, d}
+Dans rdd_a.py, on a:
+    print(counts == pow(4, 16))
+
+
+ubuntu@combispark:~/spark_python$ time spark-submit rdd_a.py
+[Stage 0:============================================>              (3 + 1) / 4]True
+
+real    38m10.075s
+user    0m18.200s
+sys     0m2.260s
+
+
+On voit que le programme renvoi True, il a bien compté 4^16 objets dans le rdd avec un map-reduce (soit environ 4 milliards !)
+Il n'y a eu aucune saturation de la mémoire, donc spark a bien généré les données à la volée.
