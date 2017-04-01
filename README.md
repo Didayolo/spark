@@ -93,6 +93,12 @@ Approches possibles:
 Dans chacun des cas, l'objectif final est de lancer un map-reduce pour, par exemple, 
 compter les éléments de T.
 
+# Optimisation des calculs utilisant des RDDs:
+- [ ] Faire du profiling pour déterminer quelle(s) partie(s) de l'éxécution prend beaucoup de temps
+- [ ] Faire un algo hybride (méthode naive/optimisée) selon la taille du RDD
+- [ ] Applatir le RDD en mémoire à un certain niveau
+
+
 ## Formation
 
 - [X] Réunion Spark
