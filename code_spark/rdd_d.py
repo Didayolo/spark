@@ -15,7 +15,7 @@ def distSucc(rdd):
 it = generator(distSeeds, distSucc)
 
 print("Creation du rdd...")
-for i in range(14):
+for i in range(15):
     rdd = next(it)
     print(rdd.getNumPartitions())
     
