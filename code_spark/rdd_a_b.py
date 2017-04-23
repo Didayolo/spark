@@ -24,14 +24,13 @@ n = 5
 for i in range(n):
     rdd = next(it)
 
-counts = rdd.map(lambda word: 1) \
+count = rdd.map(lambda word: 1) \
             .reduce(lambda a, b: a + b)
 
 
 #print(counts == pow(4, 16)) #range(15)
 #print(rdd.collect())
-print(counts)
-print(rdd.collect())
+#print(rdd.collect())
 """
 #test generateur recursif
 it = generator(distSeeds, distSucc)
@@ -40,6 +39,7 @@ print(next(it).collect())
 """
 t2 = time.clock()
 print("n = "+str(n))
+print("count = "+str(count))
 print("Temps d'execution: " +str(t2 - t1)+" secondes.")
 
 sc.stop()

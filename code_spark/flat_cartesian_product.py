@@ -12,10 +12,11 @@ distSeeds = sc.parallelize(range(4**n))
 rdd = distSeeds.cartesian(distSeeds)
 
 #print(rdd.count())
-rdd.count()
+count = rdd.count()
 
 t2 = time.clock()
 print("n = "+str(n))
+print("count = "+str(count))
 print("Temps d'execution: " +str(t2 - t1)+" secondes.")
 
 sc.stop()

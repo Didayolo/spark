@@ -21,16 +21,18 @@ def allWords(n):
     return ret
 
 n = 3
-print(allWords(n)).collect()
 
-#rdd = allWords(4)
-#print(rdd.count())
+#print(allWords(n)).collect()
+
+rdd = allWords(n)
+count = rdd.count()
 
 #counts = rdd.map(lambda word: 1).reduce(operator.add)
 #print(counts)
 
 t2 = time.clock()
 print("n = "+str(n))
+print("count = "+str(count))
 print("Temps d'execution: " +str(t2 - t1)+" secondes.")
 
 sc.stop()
