@@ -6,7 +6,7 @@ sc = SparkContext(conf=conf)
 
 t1 = time.clock()
 
-n = 8
+n = 6
 
 distSeeds = sc.parallelize(range(4**n))
 rdd = distSeeds.cartesian(distSeeds)

@@ -1,8 +1,11 @@
+import time
 from pyspark import SparkContext, SparkConf
 from gen import generator
 
 conf = SparkConf().setAppName("rdd")
 sc = SparkContext(conf=conf)
+
+t1 = time.clock()
 
 # a et b pas naturel a implementer
 
@@ -16,9 +19,10 @@ def distSucc(rdd):
 
 it = generator(distSeeds, distSucc)
 
-for i in range(5):
+n = 5
+
+for i in range(n):
     rdd = next(it)
-    
 
 counts = rdd.map(lambda word: 1) \
             .reduce(lambda a, b: a + b)
@@ -34,4 +38,8 @@ it = generator(distSeeds, distSucc)
 print(next(it).collect())
 print(next(it).collect())
 """
+t2 = time.clock()
+print("n = "+str(n))
+print("Temps d'execution: " +str(t2 - t1)+" secondes.")
+
 sc.stop()
