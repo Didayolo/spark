@@ -4,20 +4,22 @@ from pyspark import SparkContext, SparkConf
 conf = SparkConf().setAppName("rdd")
 sc = SparkContext(conf=conf)
 
-t1 = time.clock()
+for n in range(2, 9):
 
-n = 6
+    t1 = time.time()
 
-distSeeds = sc.parallelize(range(4**n))
-rdd = distSeeds.cartesian(distSeeds)
+    distSeeds = sc.parallelize(range(4**n))
+    rdd = distSeeds.cartesian(distSeeds)
 
-#print(rdd.count())
-count = rdd.count()
+    #print(rdd.count())
+    count = rdd.count()
 
-t2 = time.clock()
-print("n = "+str(n))
-print("count = "+str(count))
-print("Temps d'execution: " +str(t2 - t1)+" secondes.")
+    #num partitions ?
+
+    t2 = time.time()
+    print("n = "+str(n*2))
+    print("count = "+str(count))
+    print("Temps d'execution: " +str(t2 - t1)+" secondes.")
 
 sc.stop()
 

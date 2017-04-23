@@ -5,35 +5,33 @@ import operator
 conf = SparkConf().setAppName("rdd")
 sc = SparkContext(conf=conf)
 
-t1 = time.clock()
-
-distSeeds = sc.parallelize(['a', 'b', 'c', 'd'])
-
-
 def distSucc(rdd):
     return rdd.cartesian(rdd)
     #return sc.union([rdd, rdd.cartesian(distSeeds)])
-
+ 
 def allWords(n):
     ret = distSeeds
     for i in range(n-1):
         ret = distSucc(ret)
     return ret
 
-n = 3
+for n in range(2, 5):
 
-#print(allWords(n)).collect()
+    t1 = time.time()
 
-rdd = allWords(n)
-count = rdd.count()
+    distSeeds = sc.parallelize(['a', 'b', 'c', 'd'])
 
-#counts = rdd.map(lambda word: 1).reduce(operator.add)
-#print(counts)
+    rdd = allWords(n)
+    #count = rdd.count()
 
-t2 = time.clock()
-print("n = "+str(n))
-print("count = "+str(count))
-print("Temps d'execution: " +str(t2 - t1)+" secondes.")
+    #print(allWords(n)).collect()
+    count = rdd.map(lambda word: 1).reduce(operator.add)
+    #print(counts)
+
+    t2 = time.time()
+    print("n = "+str(2**(n-1)))
+    print("count = "+str(count))
+    print("Temps d'execution: " +str(t2 - t1)+" secondes.")
 
 sc.stop()
 

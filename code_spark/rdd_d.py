@@ -5,59 +5,59 @@ from gen import generator
 conf = SparkConf().setAppName("rdd")
 sc = SparkContext(conf=conf)
 
-t1 = time.clock()
-
-seeds = ['']
-distSeeds = sc.parallelize(seeds)
-
 def distSucc(rdd):
     r = rdd.flatMap(lambda w: [w+'a', w+'b', w+'c', w+'d'])
     return r
 
+for n in range(4, 17):
 
-it = generator(distSeeds, distSucc)
+    t1 = time.time()
 
-n = 12
+    seeds = ['']
+    distSeeds = sc.parallelize(seeds)
 
-print("Creation du rdd...")
-for i in range(n):
-    rdd = next(it)
-    print(rdd.getNumPartitions())
+    it = generator(distSeeds, distSucc)
+
+    #print("Creation du rdd...")
+    for i in range(n+1):
+        rdd = next(it)
+        #print(rdd.getNumPartitions())
     
-print("fait.")
+    #print("fait.")
 
-print(rdd.getNumPartitions())
+    #print(rdd.getNumPartitions())
 
-"""
-print("map reduce...")
-counts = rdd.map(lambda word: 1) \
-            .reduce(lambda a, b: a + b)
-print("fait.")
-"""
+    """
+    print("map reduce...")
+    counts = rdd.map(lambda word: 1) \
+                .reduce(lambda a, b: a + b)
+    print("fait.")
+    """
 
-#test separation map et reduce
-print("map...")
-rdd = rdd.map(lambda w: 1)
-print("fait.")
-print(rdd.getNumPartitions())
-print("reduce...")
-count = rdd.reduce(lambda a, b: a + b)
-print("fait.")
+    #test separation map et reduce
+    #print("map...")
+    #rdd = rdd.map(lambda w: 1)
+    #print("fait.")
+    #print(rdd.getNumPartitions())
+    #print("reduce...")
+    #count = rdd.reduce(lambda a, b: a + b)
+    count = rdd.count()
+    #print("fait.")
 
-#print(counts == pow(4, 16)) #range(15)
-#print(rdd.collect())
-#print(counts)
-#print(rdd.collect())
-"""
-#test generateur recursif
-it = generator(distSeeds, distSucc)
-print(next(it).collect())
-print(next(it).collect())
-"""
+    #print(counts == pow(4, 16)) #range(15)
+    #print(rdd.collect())
+    #print(counts)
+    #print(rdd.collect())
+    """
+    #test generateur recursif
+    it = generator(distSeeds, distSucc)
+    print(next(it).collect())
+    print(next(it).collect())
+    """
 
-t2 = time.clock()
-print("n = "+str(n))
-print("count = "+str(count))
-print("Temps d'execution: " +str(t2 - t1)+" secondes.")
+    t2 = time.time()
+    print("n = "+str(n))
+    print("count = "+str(count))
+    print("Temps d'execution: " +str(t2 - t1)+" secondes.")
 
 sc.stop()

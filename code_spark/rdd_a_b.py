@@ -5,28 +5,34 @@ from gen import generator
 conf = SparkConf().setAppName("rdd")
 sc = SparkContext(conf=conf)
 
-t1 = time.clock()
-
-# a et b pas naturel a implementer
-
-seeds = ['']
-distSeeds = sc.parallelize(seeds)
-
 def distSucc(rdd):
     r = rdd.flatMap(lambda w: [w+'a', w+'b', w+'c', w+'d'])
     return r
 
 
-it = generator(distSeeds, distSucc)
+for n in range(4, 17):
 
-n = 5
+    t1 = time.time()
 
-for i in range(n):
-    rdd = next(it)
+    # a et b pas naturel a implementer
 
-count = rdd.map(lambda word: 1) \
-            .reduce(lambda a, b: a + b)
+    seeds = ['']
+    distSeeds = sc.parallelize(seeds)
 
+    it = generator(distSeeds, distSucc)
+
+    for i in range(n+1):
+        rdd = next(it)
+
+    count = rdd.map(lambda word: 1) \
+                .reduce(lambda a, b: a + b)
+
+
+    t2 = time.time()
+
+    print("n = "+str(n))
+    print("count = "+str(count))
+    print("Temps d'execution: " +str(t2 - t1)+" secondes.")
 
 #print(counts == pow(4, 16)) #range(15)
 #print(rdd.collect())
@@ -37,9 +43,5 @@ it = generator(distSeeds, distSucc)
 print(next(it).collect())
 print(next(it).collect())
 """
-t2 = time.clock()
-print("n = "+str(n))
-print("count = "+str(count))
-print("Temps d'execution: " +str(t2 - t1)+" secondes.")
 
 sc.stop()

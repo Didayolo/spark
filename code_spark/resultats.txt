@@ -1,0 +1,153 @@
+ubuntu@combispark:~/spark/code_spark$ spark-submit cartesian_product.py 
+n = 2                                                                        
+count = 16
+Temps d'execution: 2.3307621479 secondes.
+
+n = 4                                                                         
+count = 256
+Temps d'execution: 4.17916512489 secondes.
+
+n = 8                                                                        
+count = 65536
+Temps d'execution: 695.353482008 secondes.
+
+-------------------------------------------------
+
+ubuntu@combispark:~/spark/code_spark$ spark-submit flat_cartesian_product.py 
+n = 4                                     
+count = 256
+Temps d'execution: 2.4190351963 secondes.
+
+n = 6
+count = 4096
+Temps d'execution: 0.353152990341 secondes.
+
+n = 8
+count = 65536
+Temps d'execution: 0.382545948029 secondes.
+
+n = 10
+count = 1048576
+Temps d'execution: 0.429254055023 secondes.
+
+n = 12                                                                       
+count = 16777216
+Temps d'execution: 1.07352209091 secondes.
+
+n = 14                                                                        
+count = 268435456
+Temps d'execution: 8.59806895256 secondes.
+
+n = 16                                                                        
+count = 4294967296
+Temps d'execution: 135.075317144 secondes.
+
+---------------------------------------------------
+
+ubuntu@combispark:~/spark/code_spark$ spark-submit rdd_a_b.py 
+n = 4                                                                          
+count = 256
+
+Temps d'execution: 2.06822109222 secondes.
+n = 5
+count = 1024
+
+Temps d'execution: 0.168127059937 secondes.
+n = 6
+count = 4096
+
+Temps d'execution: 0.173949956894 secondes.
+n = 7
+count = 16384
+
+Temps d'execution: 0.143621921539 secondes.
+n = 8
+count = 65536
+
+Temps d'execution: 0.178318023682 secondes.
+n = 9
+count = 262144
+
+Temps d'execution: 0.279592037201 secondes.
+n = 10
+count = 1048576
+
+Temps d'execution: 0.665316820145 secondes.
+n = 11                                                                         
+count = 4194304
+
+Temps d'execution: 2.3624560833 secondes.
+n = 12                                                                         
+count = 16777216
+
+Temps d'execution: 9.72046399117 secondes.
+n = 13                                                                         
+count = 67108864
+
+Temps d'execution: 35.2142591476 secondes.
+n = 14                                                                         
+count = 268435456
+
+Temps d'execution: 140.018312931 secondes.
+n = 15                                                                         
+count = 1073741824
+Temps d'execution: 562.657941103 secondes.
+
+n = 16                                                                         
+count = 4294967296
+Temps d'execution: 2255.77566886 secondes.
+
+---------------------------------------------------------
+
+ubuntu@combispark:~/spark/code_spark$ spark-submit rdd_d.py 
+n = 4                                                                          
+count = 256
+Temps d'execution: 2.06516599655 secondes.
+
+n = 5
+count = 1024
+Temps d'execution: 0.115505933762 secondes.
+
+n = 6
+count = 4096
+Temps d'execution: 0.144467830658 secondes.
+
+n = 7
+count = 16384
+Temps d'execution: 0.152257919312 secondes.
+
+n = 8
+count = 65536
+Temps d'execution: 0.165119886398 secondes.
+
+n = 9
+count = 262144
+Temps d'execution: 0.2246530056 secondes.
+
+n = 10
+count = 1048576
+Temps d'execution: 0.47424697876 secondes.
+
+n = 11                                                                         
+count = 4194304
+Temps d'execution: 1.37042093277 secondes.
+
+n = 12                                                                         
+count = 16777216
+Temps d'execution: 4.97001814842 secondes.
+
+n = 13                                                                         
+count = 67108864
+Temps d'execution: 19.4066779613 secondes.
+
+n = 14                                                                         
+count = 268435456
+Temps d'execution: 79.1175370216 secondes.
+
+n = 15                                                                         
+count = 1073741824
+Temps d'execution: 307.067672014 secondes.
+
+n = 16                                                                         
+count = 4294967296
+Temps d'execution: 1236.23200703 secondes.
