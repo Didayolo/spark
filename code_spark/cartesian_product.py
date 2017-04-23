@@ -1,8 +1,11 @@
+import time
 from pyspark import SparkContext, SparkConf
 import operator
 
 conf = SparkConf().setAppName("rdd")
 sc = SparkContext(conf=conf)
+
+t1 = time.clock()
 
 distSeeds = sc.parallelize(['a', 'b', 'c', 'd'])
 
@@ -17,7 +20,8 @@ def allWords(n):
         ret = distSucc(ret)
     return ret
 
-print(allWords(3)).collect()
+n = 3
+print(allWords(n)).collect()
 
 #rdd = allWords(4)
 #print(rdd.count())
@@ -25,6 +29,9 @@ print(allWords(3)).collect()
 #counts = rdd.map(lambda word: 1).reduce(operator.add)
 #print(counts)
 
+t2 = time.clock()
+print("n = "+str(n))
+print("Temps d'execution: " +str(t2 - t1)+" secondes.")
 
 sc.stop()
 
