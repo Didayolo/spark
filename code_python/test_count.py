@@ -8,8 +8,9 @@ def quick_pow4(n):
 ### simple_calc version python ###
 for n in range(4,14):
     t1 = time.time()
-    tmp = quick_pow4(n)
-    arr = [i for i in range(tmp)]
+    #tmp = quick_pow4(n)
+    #arr = [i for i in range(tmp)]
+    arr = [i for i in range(quick_pow4(n))]
 
     """
     #count

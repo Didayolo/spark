@@ -13,8 +13,8 @@ for n in range(1, 17):
     rdd = sc.parallelize(range(4**k))
 
     for i in range(n):    
-        rdd = rdd.union(rdd)
-        #rdd = rdd.cartesian(rdd)
+#        rdd = rdd.union(rdd)
+        rdd = rdd.cartesian(rdd)
         
     count = rdd.count()
 
