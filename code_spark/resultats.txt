@@ -151,3 +151,40 @@ Temps d'execution: 307.067672014 secondes.
 n = 16                                                                         
 count = 4294967296
 Temps d'execution: 1236.23200703 secondes.
+
+-------------------------------------------------
+
+ubuntu@combispark:~/spark/code_spark$ spark-submit flat_simple_calc.py 
+n = 1                                                                           
+count = 4096
+Temps d'execution: 2.07155799866 secondes.
+n = 2
+count = 16384
+Temps d'execution: 0.159244060516 secondes.
+n = 3
+count = 65536
+Temps d'execution: 0.141839981079 secondes.
+n = 4
+count = 262144
+Temps d'execution: 0.14775800705 secondes.
+n = 5
+count = 1048576
+Temps d'execution: 0.231447935104 secondes.
+n = 6
+count = 4194304
+Temps d'execution: 0.336905002594 secondes.
+n = 7                                                                           
+count = 16777216
+Temps d'execution: 1.28121304512 secondes.
+n = 8                                                                           
+count = 67108864
+Temps d'execution: 3.38049793243 secondes.
+n = 9                                                                           
+count = 268435456
+Temps d'execution: 13.2987101078 secondes.
+n = 10                                                                          
+count = 1073741824
+Temps d'execution: 51.5460860729 secondes.
+n = 11                                                                          
+count = 4294967296
+Temps d'execution: 200.725756168 secondes.

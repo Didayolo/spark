@@ -27,7 +27,8 @@ for n in range(4, 17):
         if(i==k):
 #            rdd = sc.parallelize(rdd.collect()) #aplatissement profondeur k
 #            rdd = rdd.flatten()    
-            rdd = rdd.flatMap(lambda x : x)
+#            rdd = rdd.flatMap(lambda x : x).cache()
+            rdd = rdd.map(lambda x : x).cache()
         #print(rdd.getNumPartitions())
     
     #print("fait.")
